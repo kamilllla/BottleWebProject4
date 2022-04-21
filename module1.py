@@ -10,9 +10,9 @@ sample = r'[A-Za-z0-9]+[A-Za-z0-9._%-]+[A-Za-z0-9]+@[A-Za-z0-9.-]+[A-Za-z0-9]+\.
 f=0  
 def check(mail):
    if (re.fullmatch(sample, mail)): #fullmatch  - полностью вся входящая строка (findall, sub, finditer, etc.)
-       return 1
+       return True
    else:
-       return 0
+       return False
 @post('/ind', method='post')#обработка POST-запроса
 #функция обработки строк
 def module1():
